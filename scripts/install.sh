@@ -53,7 +53,7 @@ dotfiles_manipulation() {
     printf "\nCloning Folder from GitHub\n\n"
 
     # clone my dotfiles repository
-    git clone https://github.com/Sunhaloo/dotfiles-new ~/GitHub/dotfiles-new
+    git clone https://github.com/Sunhaloo/dotfiles-xorg ~/GitHub/dotfiles-xorg
 
     printf "\nChecking for Existing Files & Folders\n\n"
 
@@ -70,15 +70,15 @@ dotfiles_manipulation() {
 
     printf "\nMoving Folders\n\n"
     # copy folders from dotfiles to `~/.config`
-    cp -r ~/GitHub/dotfiles-new/scripts ~/.config/
-    cp -r ~/GitHub/dotfiles-new/i3 ~/.config/
-    cp -r ~/GitHub/dotfiles-new/kitty ~/.config/
-    cp -r ~/GitHub/dotfiles-new/ohmyposh ~/.config/
-    cp -r ~/GitHub/dotfiles-new/polybar ~/.config/
-    cp -r ~/GitHub/dotfiles-new/picom ~/.config/
-    cp -r ~/GitHub/dotfiles-new/rofi ~/.config/
-    cp -r ~/GitHub/dotfiles-new/.zshrc ~/
-    cp -r ~/GitHub/dotfiles-new/.tmux.conf ~/
+    cp -r ~/GitHub/dotfiles-xorg/scripts ~/.config/
+    cp -r ~/GitHub/dotfiles-xorg/i3 ~/.config/
+    cp -r ~/GitHub/dotfiles-xorg/kitty ~/.config/
+    cp -r ~/GitHub/dotfiles-xorg/ohmyposh ~/.config/
+    cp -r ~/GitHub/dotfiles-xorg/polybar ~/.config/
+    cp -r ~/GitHub/dotfiles-xorg/picom ~/.config/
+    cp -r ~/GitHub/dotfiles-xorg/rofi ~/.config/
+    cp -r ~/GitHub/dotfiles-xorg/.zshrc ~/
+    cp -r ~/GitHub/dotfiles-xorg/.tmux.conf ~/
 
     printf "\nNeovim Configuration\n\n"
 
@@ -87,7 +87,7 @@ dotfiles_manipulation() {
     rm -rf ~/.local/state/nvim
 
     # copy folders from dotfiles to `~/.config`
-    cp -r ~/GitHub/dotfiles-new/nvim ~/.config/
+    cp -r ~/GitHub/dotfiles-xorg/nvim ~/.config/
 }
 
 
