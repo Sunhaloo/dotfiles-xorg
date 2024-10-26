@@ -105,6 +105,7 @@ else
     printf "\n\nSript File has NOT been Found!!!\n\n"
     # exit with error
     exit 1
+fi
 
 
 # call the function to display options to user
