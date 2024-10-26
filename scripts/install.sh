@@ -6,7 +6,8 @@ display_options() {
     printf "\nOption [1]: Update and Install Drivers and Tools"
     printf "\nOption [2]: Install Dotfiles Applications"
     printf "\nOption [3]: Create Folders & Move Dotfiles Configuration Applications"
-    printf "\nOption [4]: Exit\n\n"
+    printf "\nOption [4]: GitHub Configuration"
+    printf "\nOption [5]: Exit\n\n"
 }
 
 # create a function to install Oh-My-Zsh
@@ -90,22 +91,23 @@ dotfiles_manipulation() {
     cp -r ~/GitHub/dotfiles-xorg/nvim ~/.config/
 }
 
-
-# first of all; run `git.sh` ( no matter what )
-# check if the file exists
-if [ -f git.sh ]; then
-    printf "\nRunning Git Script\n\n"
-    # make sure that `git.sh` is executable
-    chmod +x git.sh
-    # run the script
-    bash ./git.sh
-# if the file has not been found
-else
-    # output approriate message
-    printf "\n\nSript File has NOT been Found!!!\n\n"
-    # exit with error
-    exit 1
-fi
+github_configuration() {
+    # first of all; run `git.sh` ( no matter what )
+    # check if the file exists
+    if [ -f git.sh ]; then
+        printf "\nRunning Git Script\n\n"
+        # make sure that `git.sh` is executable
+        chmod +x git.sh
+        # run the script
+        bash ./git.sh
+    # if the file has not been found
+    else
+        # output approriate message
+        printf "\n\nSript File has NOT been Found!!!\n\n"
+        # exit with error
+        exit 1
+    fi
+}
 
 
 # call the function to display options to user
@@ -201,8 +203,13 @@ elif [ "$user_option" = 3 ]; then
 
     printf "\n\nHave a nice Day!\n\n"
 
-# if the user wants to exits the script
+# if the user selects to confiure GitHub
 elif [ "$user_option" = 4 ]; then
+    # call the function for the GitHub configuration
+    github_configuration
+    printf "\n\nHave a nice Day!\n\n"
+# if the user wants to exits the script
+elif [ "$user_option" = 5 ]; then
     printf "\nGoodBye!\n\n"
     exit 0
 # if the user enters something else
