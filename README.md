@@ -202,12 +202,12 @@ Well, now that I am realising; I could have made the install script run without 
 
 I always wanted to use vanilla arch!
 
-When I was testing for the install script to work on a vanilla arch; which I installed on laptop ( bare metal ). I had a lot of inconvenience; like the folders 'Desktop', 'Downloads', 'Music' and more was not even here!
+When I was testing the install script to work on a vanilla arch; which I installed on laptop ( bare metal ). I had a lot of inconvenience; like the folders 'Desktop', 'Downloads', 'Music' and I had to use USB Tethering to install it!
 
-The **main** reason for using Endeavour is that its a time saver!
+The **main** reason for using Endeavour OS is that its a time saver!
 
-Like in the installation, [yay](https://github.com/Jguer/yay) is already installed!
-In addition, somethings like the Arc ( Dark ) theme which I really like is already configured!
+Like in the installation, [yay](https://github.com/Jguer/yay), [broadcom-wl](https://archlinux.org/packages/extra/x86_64/broadcom-wl/) and *more* are already installed!
+In addition, some things like the Arc ( Dark ) theme which I really like is already configured!
 
 But its not like its really bloated of anything, its light ( *depending on the packages you select* ), but its light. For my coding and browsing needs, I does everything that I throw at it.
 
@@ -224,7 +224,7 @@ But its not like its really bloated of anything, its light ( *depending on the p
 ---
 
 >[!NOTE]
->If you have any problems or some improvement that you can make the make the script better.
+>If you have any problems or some improvement that you can make for the installation script or overall.
 >Please, Please feel free to contact me using these contacts below $\downarrow$:
 >
 >- **Instagram**: https://www.instagram.com/s.sunhaloo
