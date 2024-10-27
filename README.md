@@ -129,7 +129,7 @@ Endeavour OS comes pre-installed with many packages. This help the user to basic
 
 Normally, we have 3 options; 'systemd' *thing*, 'grub' and *no bootloader*.
 
-If you don't have the option of 'systemd', **select it**.
+If you have the option for 'systemd', please **select it**.
 
 >When I was beginning my Linux "*career*" ( *if that's even a thing* ). I used to use 'grub'.
 >I got a lot of problems with 'grub'.

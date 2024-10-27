@@ -41,11 +41,12 @@ delete_make_files() {
     rm -rf ~/OBS\ Studio/
     rm -rf ~/Obsidian/
     
-    printf "\nCreating Files Folders\n\n"
+    printf "\nCreating Folders\n\n"
     # create folders
     mkdir -p ~/GitHub/
     mkdir -p ~/OBS\ Studio/
     mkdir -p ~/Obsidian/
+    mkdir -p ~/Screenshots/
 }
 
 
@@ -71,7 +72,7 @@ dotfiles_manipulation() {
 
     printf "\nMoving Folders\n\n"
     # copy folders from dotfiles to `~/.config`
-    cp -r ~/GitHub/dotfiles-xorg/scripts ~/.config/
+    cp -r ~/GitHub/dotfiles-xorg/scripts ~/
     cp -r ~/GitHub/dotfiles-xorg/i3 ~/.config/
     cp -r ~/GitHub/dotfiles-xorg/kitty ~/.config/
     cp -r ~/GitHub/dotfiles-xorg/ohmyposh ~/.config/
@@ -160,7 +161,7 @@ if [ "$user_option" = 1 ]; then
     # update the system ( without the need to press 'Y' )
     sudo pacman -Syu --noconfirm
     # install required packages from lovely pacman
-    install_package i3 autotiling picom polybar zsh git kitty lxinput feh maim xclip ldns thunar-volman gvfs gvfs-afc gufw gcc clang python-requests nodejs npm rustup lua openjdk21-src ffmpeg ripgrep fd zoxide fzf eza rofi-emoji mypaint btop brightnessctl neovim lazygit p7zip tmux
+    install_package i3 autotiling picom polybar zsh git kitty lxinput feh maim xclip ldns thunar-volman gvfs gvfs-afc gufw gcc clang python-requests nodejs npm rustup lua openjdk21-src ffmpeg ripgrep fd zoxide fzf eza rofi-emoji mypaint btop brightnessctl neovim lazygit p7zip tmux yazi ristretto
     # install required packages from the AUR
     install_yay_package intel-ivsc-firmware nwg-look
 
