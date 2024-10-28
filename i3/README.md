@@ -34,7 +34,7 @@
 - [Rofi](https://github.com/davatorium/rofi) $\rightarrow$ Application Launcher
     - [rofi-emoji](https://github.com/Mange/rofi-emoji) $\rightarrow$ Emoji Selector for Rofi
 - [Kitty](https://github.com/kovidgoyal/kitty) $\rightarrow$ Terminal Emulator
-- [VS Codium](https://github.com/VSCodium/vscodium) $\rigtharrow$ IDE
+- [VS Codium](https://github.com/VSCodium/vscodium) $\rightarrow$ IDE
 - [Thorium](https://github.com/Alex313031/thorium) $\rightarrow$ Web Browser
 - [Thunar](https://wiki.archlinux.org/title/Thunar) $\rightarrow$ File Manager
 
