@@ -1,6 +1,6 @@
 # My Arch Linux Setup
 
->I will continue to update it little by little
+>I will keep updating this very dotfiles repository gradually.
 
 ---
 
@@ -29,14 +29,14 @@
 # Requirements
 
 - [Endeavour OS ISO File](https://endeavouros.com/)
-- ( USB ) Flash Drive
-- Software to *burn* the ISO File to Flash Drive
+- USB Flash Drive
+- Software to write the ISO File to Flash Drive
 	- [rufus](https://rufus.ie/en/)
 	- [balena-etcher](https://github.com/balena-io/etcher)
 - Internet Connection
 
 >[!NOTE]
->The whole thing ( _including things that does is **not** present in install script_ ) should take around 1 hour to completely setup Arch Linux.
+>The whole setup ( _including parts **not** convered in the install script_ ) should take around 1 hours to set up *my* Arch Linux.
 >
 >I did it around, in like what? 15 to 25 mins just for the installation process; not including things like:
 >
@@ -52,10 +52,10 @@
 >>BTW I know these; just for people you have never done this stuff!
 >
 >1. Plug in your bootable USB Flash Drive in you... Sorry I mean your computer
->2. Enter your BIOS with your required key $\Rightarrow$ `F2`, `F12`, `DEL`, etc
+>2. Enter your BIOS with your required key like `F2`, `F12`, `DEL`, etc
 >3. Select your USB Flash Drive
 >
->Normally in the BIOS, that USB Flash Drive will appear as 'USB: UEFI' or something along those lines.
+>In the BIOS, the USB Flash Drive usually appears as 'USB: UEFI' or something similar.
 >
 
 ## Booting Up Into Endeavour OS
@@ -63,9 +63,9 @@
 You are going to see a black screen asking you to select an option to enter in the "*live*" environment.
 
 >[!WARNING]
->Don't press `Enter` like a mad-man! I think you have to select the **second** option if you are using [Nvidia](https://www.nvidia.com/en-us/) GPUs. Hence, always **read** first, then you proceed!
+>Don't press `Enter` like a mad-man! I think you have to select the **second** option if you are using [Nvidia](https://www.nvidia.com/en-us/) GPUs. So, always **read** the options first, then you can proceed!
 >
->In addition, whichever option you select, the *steps* below $\downarrow$ will still be the **same**.
+>In addition, whichever option you select, the *steps* below will still be the **same**.
 
 Currently, Endeavour OS uses the [KDE Plasma](https://kde.org/plasma-desktop/) Desktop Environment for its "*live boot*". It should be similar to something like Windows, where you have a taskbar at the bottom.
 
@@ -136,7 +136,7 @@ If you have the option for 'systemd', please **select it**.
 
 #### To Swap or To Not Swap
 
->That is the question $\uparrow$
+>That is the question!
 
 Nowadays with the ["*Powweerrr*"](https://www.youtube.com/watch?v=4n91tUoUWSo) that we have; it's not really necessary to make a "*swap*" partition.
 
@@ -149,27 +149,27 @@ Hence, just select `ext4` as your partition type and continue.
 
 After restarting ( *I hope that you removed the Flash Drive* ), you will be greeted by *LightDM* at the login screen.
 
-After login, you are going to see something like this $\downarrow$:
+After login, you should see something like this:
 
 ![first boot](./screenshots/First%20Login%20-%20Launch.png)
 
 ## Clone Repository
 
-Go ahead and open the default 'xfce4-terminal' in which you are going to **clone** this very repository like so $\downarrow$:
+Go ahead and open the default 'xfce4-terminal' in which you are going to **clone** this very repository like so:
 
 ```bash
-git clone https://github.com/Sunhaloo/dotfiles
+git clone https://github.com/Sunhaloo/dotfiles-xorg
 ```
 
-Running the command will clone my dotfiles repository into your machine. If you type the command `ls | grep dotfiles`; you are going to a folder named... *dotfiles*!
+Running the command will clone my dotfiles ( *for `X11`* ) repository into your machine. If you type the command `ls | grep dotfiles-xorg`; you are going to a folder named... *dotfiles-xorg*!
 
-After that, follow the code block below $\downarrow$:
+After that, follow the code block below:
 
 ```bash
-cd dotfiles/scripts; ./install.sh
+cd dotfiles-xorg/scripts; ./install.sh
 ```
 
-What this $\uparrow$ does; it will go into the folder `dotfiles`, then into `scripts` and finally **run** the *install* script.
+The above command navigates into the `dotfiles-xorg` folder, then into `scripts`, and finally runs the `install.sh` script.
 
 ### Running the Script
 
@@ -196,20 +196,20 @@ Well, now that I am realising; I could have made the install script run without 
 >Well, choosing option '1' and '2', will **not** cause any harm. Because they are just updating and installing application and ChatGPT provided a code that if it founds that package ( *that is already installed* ); it will simply provide a message instead of re-installing it.
 >
 >But its a different story with option number '3'. **It's going to delete folders**...
->Hence, simply **don't run the whole script again**!
+>So, simply **avoid running the whole script agains!**
 
 # Why Use Endeavour OS
 
-I always wanted to use vanilla arch!
+I've always wanted to use vanilla Arch!
 
 When I was testing the install script to work on a vanilla arch; which I installed on laptop ( bare metal ). I had a lot of inconvenience; like the folders 'Desktop', 'Downloads', 'Music' and I had to use USB Tethering to install it!
 
-The **main** reason for using Endeavour OS is that its a time saver!
+The **main** reason for using Endeavour OS is that it's a time-saver!
 
-Like in the installation, [yay](https://github.com/Jguer/yay), [broadcom-wl](https://archlinux.org/packages/extra/x86_64/broadcom-wl/) and *more* are already installed!
-In addition, some things like the Arc ( Dark ) theme which I really like is already configured!
+During the installation, [yay](https://github.com/Jguer/yay), [broadcom-wl](https://archlinux.org/packages/extra/x86_64/broadcom-wl/) and *more* are already installed! Heck, even the broadcom-wl drivers are already there in the *live* environment
+Additionally, some configurations, like the Arc ( Dark ) theme that I really like, are already set up!
 
-But its not like its really bloated of anything, its light ( *depending on the packages you select* ), but its light. For my coding and browsing needs, I does everything that I throw at it.
+But its not like its really bloated of anything, its light ( *depending on the packages you select* ), but its light. For my coding and browsing needs, it handles everything that I throw at it.
 
 >[!TIP] Again
 >The main reason that I use Linux are:
@@ -224,8 +224,8 @@ But its not like its really bloated of anything, its light ( *depending on the p
 ---
 
 >[!NOTE]
->If you have any problems or some improvement that you can make for the installation script or overall.
->Please, Please feel free to contact me using these contacts below $\downarrow$:
+>If you have any issues / suggestions for improving the installation script or overall setup.
+>Please feel free to contact me using these contacts below:
 >
 >- **Instagram**: https://www.instagram.com/s.sunhaloo
 >- **YouTube**: https://www.youtube.com/channel/UCMkQZsuW6eHMhdUObLPSpwg
