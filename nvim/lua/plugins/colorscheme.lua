@@ -11,11 +11,16 @@ return {
                 transparent = true,
                 term_colors = true,
                 code_style = {
-                    comments = 'italic',
+                    comments = 'none',
                     keywords = 'none',
-                    functions = 'underline',
-                    strings = 'italic',
-                    variables = 'bold'
+                    functions = 'none',
+                    strings = 'none',
+                    variables = 'none'
+                    -- comments = 'italic',
+                    -- keywords = 'none',
+                    -- functions = 'underline',
+                    -- strings = 'italic',
+                    -- variables = 'bold'
                 },
                 diagnostics = {
                     darker = true,
