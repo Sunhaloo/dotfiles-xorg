@@ -4,10 +4,12 @@ local api = vim.api
 -- don't auto comment new line
 api.nvim_create_autocmd("BufEnter", { command = [[set formatoptions-=cro]] })
 
+-- Set custom highlight for yanked text
+vim.api.nvim_set_hl(0, "YankHighlight", { bg = "#e55561", fg = "#000000" }) -- Example colors
 -- highlight on yanking
 api.nvim_create_autocmd("TextYankPost", {
   callback = function()
-    vim.highlight.on_yank()
+    vim.highlight.on_yank({ higroup = "YankHighlight", timeout = 100 })
   end,
 })
 
@@ -28,18 +30,20 @@ api.nvim_create_autocmd(
   { "BufRead", "BufNewFile" },
   -- { pattern = { "*.txt", "*.md", "*.tex" }, command = [[setlocal spell<cr> setlocal spelllang=en,de<cr>]] }
   {
-    pattern = { "*.txt", "*.md", "*.tex", "*.sql", },
+    pattern = { "*.txt", "*.md" },
     callback = function()
       vim.opt.spell = true
-      vim.opt.spelllang = "en_gb"
+      vim.opt.spelllang = "en_GB"
     end,
   }
 )
 
--- set caret / cursor to "beam / bar" after exiting neovim
--- NOTE: enable if you are using beam / bar caret ( cursor )
--- vim.api.nvim_create_autocmd("VimLeave", {
---     group = group,
---     pattern = "*",
---     command = "set guicursor=a:ver25"
--- })
+--[[
+    -- set caret / cursor to "beam" after exiting neovim
+    -- NOTE: enable if you are using beam caret ( cursor )
+    vim.api.nvim_create_autocmd("VimLeave", {
+        group = group,
+        pattern = "*",
+        command = "set guicursor=a:ver25"
+    })
+]]--
