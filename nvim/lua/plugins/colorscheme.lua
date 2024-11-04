@@ -113,4 +113,8 @@ return {
 		})
 		end,
 	},
+	-- base16 black metal theme
+	{
+		"metalelf0/base16-black-metal-scheme",
+	}
 }

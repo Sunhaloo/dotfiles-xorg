@@ -87,11 +87,6 @@ return {
           capabilities = capabilities,
         })
       end,
-      -- ["pyright"] = function()
-      --     lspconfig["pyright"].setup({
-      --         capabilities = capabilities,
-      --     })
-      -- end,
       ["pyright"] = function()
           lspconfig["pyright"].setup({
               on_attach = function(client, bufnr)
@@ -102,6 +97,10 @@ return {
       end,
       ["clangd"] = function()
           lspconfig["clangd"].setup({
+			  -- on_attach = function(client , bufnr)
+			  --  client.server_capabilities.signatureHelpProvider = false
+			  --  on_attach(client, bufnr)
+			  -- end,
               capabilities = capabilities,
           })
       end,
