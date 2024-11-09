@@ -91,6 +91,10 @@ obsidian_move() {
 alias fucking='sudo'
 
 # System ( Arch / Arch Based Distributions )
+# refresh the package database
+alias refresh_pacman='sudo pacman -Syy'
+# clear the package cache
+alias clear_cpacman='sudo pacman -Scc'
 # list all the packages ( yay )
 alias pkglist-yay='sudo pacman -Qm'
 # list all the packages ( pacman )
